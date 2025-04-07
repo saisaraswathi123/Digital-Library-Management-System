@@ -4,7 +4,8 @@ This is a simple digital library management system built using Java, Spring Boot
 
 
  **Technologies Used** : 
- 
+ ======================
+  
    Java 17
 
   Spring Boot 3.4.4
@@ -21,6 +22,8 @@ This is a simple digital library management system built using Java, Spring Boot
 
 
  **Features** :  
+ ===============
+ 
  Add Books, Members, and Borrowings
 
   Fetch All Books, Members, and Borrowings
@@ -33,6 +36,7 @@ This is a simple digital library management system built using Java, Spring Boot
 
 
  **Project Structure** :
+ =======================
  
 ![image](https://github.com/user-attachments/assets/ab0da88a-c1b1-42d0-93e8-c15a3c46dd34)
 
@@ -40,18 +44,29 @@ This is a simple digital library management system built using Java, Spring Boot
 
 
 **API Endpoints** :
+===================
+
 Method	Endpoint	Description
+
 GET	/api/books	List all books
+
 POST	/api/books	Add a new book
+
 GET	/api/members	List all members
+
 POST	/api/members	Add a new member
+
 GET	/api/borrowings	List all borrowings
+
 POST	/api/borrowings	Add a new borrowing
+
 GET	/	Welcome message
+
 GET	/index.html	Main UI page
 
 
 **How to Run Locally** :
+========================
 
 Clone the repository  -
 
