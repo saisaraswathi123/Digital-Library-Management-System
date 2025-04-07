@@ -57,9 +57,11 @@ How to Run Locally
 Clone the repository:
 
 git clone https://github.com/saisaraswathi123/Digital-Library-Management-System.git
+
 cd Digital-Library-Management-System
 
 Set up PostgreSQL and create a database:
+
 CREATE DATABASE postgres_db;
 
 Update src/main/resources/application.properties:
@@ -70,9 +72,11 @@ spring.datasource.password=your_postgres_password
 spring.jpa.hibernate.ddl-auto=update
 
 Run the project:
+
 ./gradlew bootRun
 
 Open your browser and go to:
+
  http://localhost:8080/index.html
 
 OutPut:
@@ -81,9 +85,12 @@ OutPut:
  ![Screenshot 2025-04-07 175716](https://github.com/user-attachments/assets/8dafb8a2-df66-4e95-a0be-d2d5b3c7321e)
  ![Screenshot 2025-04-07 175742](https://github.com/user-attachments/assets/407768a1-ea7b-4248-a3f5-224c9e757fcc)
 
- Author
-Saisaraswathi
+Author
+ 
+ Saisaraswathi
+ 
  kourwarsaisaraswathi@gmail.com
+ 
  GitHub: saisaraswathi123
 
 
