@@ -106,7 +106,7 @@ spring.jpa.hibernate.ddl-auto=update
  http://localhost:8080/index.html
 
 
-**Sample application pages:**
+**Application pages:**
 =============================
 
  ![Screenshot 2025-04-07 175523](https://github.com/user-attachments/assets/e16a0763-33bf-49ef-9d24-d275f79ce32e)
