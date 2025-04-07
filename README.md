@@ -14,7 +14,7 @@ This is a simple digital library management system built using Java, Spring Boot
 
   HTML + JavaScript (basic frontend)
 
-  Gradle (Groovy DSL)
+  Gradle 
 
   IntelliJ IDEA
 
