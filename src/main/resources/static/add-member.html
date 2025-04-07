@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+</head>
+<body>
+<h2>Add Member</h2>
+<form id="memberForm">
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="email" name="email"><br><br>
+    <button type="submit">Save Member</button>
+</form>
+
+<script>
+    document.getElementById("memberForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const member = Object.fromEntries(formData.entries());
+
+      fetch("/api/members", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(member)
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert("Member added!");
+        window.location.href = "/";
+      });
+    });
+</script>
+</body>
+</html>

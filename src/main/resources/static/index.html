@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Library System</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            margin: 0;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 10px 10px 0;
+        }
+        h2, h1, h3 {
+            color: #333;
+        }
+        .data-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sidebar to show book list -->
+<!--<div class="sidebar">
+    <h2> Available Books List</h2>
+    <ul id="booksList"></ul>
+</div>-->
+
+<!-- Main content -->
+<div class="content">
+    <h1>Welcome to Kernn Automation's Digital Library System</h1>
+
+    <!-- Add buttons -->
+    <button onclick="window.location.href='/add-book.html'">Add Book</button>
+    <button onclick="window.location.href='/add-member.html'">Add Member</button>
+    <button onclick="window.location.href='/add-borrowing.html'">Add Borrowing</button>
+
+    <br><br>
+
+    <!-- Get data buttons -->
+    <button onclick="getBooks()">Get All Books</button>
+    <button onclick="getMembers()">Get All Members</button>
+    <button onclick="getBorrowings()">Get All Borrowings</button>
+
+    <!-- Section to show data -->
+    <div class="data-list" id="resultArea"></div>
+</div>
+
+<!-- JavaScript logic -->
+<!--<script>
+    // Sidebar Book List
+    fetch('/api/books')
+        .then(res => res.json())
+        .then(data => {
+            const list = document.getElementById("booksList");
+            data.forEach(book => {
+                const li = document.createElement("li");
+                li.textContent = `${book.title} by ${book.author}`;
+                list.appendChild(li);
+            });
+        });
+
+    // Fetch and display all books
+    function getBooks() {
+        fetch('/api/books')
+            .then(res => res.json())
+            .then(data => {
+                let html = "<h3>Books</h3><ul>";
+                data.forEach(book => {
+                    html += `<li>${book.title} by ${book.author} (ISBN: ${book.isbn})</li>`;
+                });
+                html += "</ul>";
+                document.getElementById("resultArea").innerHTML = html;
+            });
+    }
+
+    // Fetch and display all members
+    function getMembers() {
+        fetch('/api/members')
+            .then(res => res.json())
+            .then(data => {
+                let html = "<h3>Members</h3><ul>";
+                data.forEach(member => {
+                    html += `<li>${member.name} (${member.email})</li>`;
+                });
+                html += "</ul>";
+                document.getElementById("resultArea").innerHTML = html;
+            });
+    }
+
+    // Fetch and display all borrowings
+    function getBorrowings() {
+        fetch('/api/borrowings')
+            .then(res => res.json())
+            .then(data => {
+                let html = "<h3>Borrowings</h3><ul>";
+                data.forEach(b => {
+                    html += `<li>Book ID: ${b.bookId}, Member ID: ${b.memberId}, Borrow Date: ${b.borrowDate}, Return Date: ${b.returnDate || "N/A"}</li>`;
+                });
+                html += "</ul>";
+                document.getElementById("resultArea").innerHTML = html;
+            });
+    }
+</script>-->
+
+</body>
+</html>
