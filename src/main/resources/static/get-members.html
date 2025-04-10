@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Members</title>
+</head>
+<body>
+<h2>All Members</h2>
+<ul id="memberList"></ul>
+
+<script>
+    fetch('/api/members')
+        .then(response => response.json())
+        .then(data => {
+            const list = document.getElementById('memberList');
+            data.forEach(member => {
+                const li = document.createElement('li');
+                li.textContent = `${member.name} (${member.email})`;
+                list.appendChild(li);
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Borrowings</title>
+</head>
+<body>
+<h2>All Borrowings</h2>
+<ul id="borrowingList"></ul>
+
+<script>
+  fetch('/api/borrowings')
+      .then(response => response.json())
+      .then(data => {
+          const list = document.getElementById('borrowingList');
+          data.forEach(b => {
+              const li = document.createElement('li');
+              li.textContent = `Member ID: ${b.memberId}, Book ID: ${b.bookId}, Date: ${b.borrowDate}`;
+              list.appendChild(li);
+          });
+      });
+</script>
+</body>
+</html>

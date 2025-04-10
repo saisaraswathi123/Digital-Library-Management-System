@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Books</title>
+</head>
+<body>
+<h2>All Books</h2>
+<ul id="bookList"></ul>
+
+<script>
+    fetch('/api/books')
+        .then(response => response.json())
+        .then(data => {
+            const list = document.getElementById('bookList');
+            data.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = `${book.title} by ${book.author}`;
+                list.appendChild(li);
+            });
+        });
+</script>
+</body>
+</html>
